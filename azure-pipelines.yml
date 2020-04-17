@@ -15,3 +15,13 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- task: SqlAzureDacpacDeployment@1
+  displayName: Execute Azure SQL : DacpacTask
+  inputs:
+    azureSubscription: '<Azure service connection>'
+    ServerName: '<Database server name>'
+    DatabaseName: '<Database name>'
+    SqlUsername: '<SQL user name>'
+    SqlPassword: '<SQL user password>'
+    DacpacFile: '<Location of Dacpac file in $(Build.SourcesDirectory) after compilation>'
