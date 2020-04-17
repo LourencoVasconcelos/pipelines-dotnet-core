@@ -17,11 +17,11 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task: SqlAzureDacpacDeployment@1
-  displayName: Execute Azure SQL : DacpacTask
+  displayName: 'newtest'
   inputs:
-    azureSubscription: '<Azure service connection>'
+    azureSubscription: '479d6672-b304-4afa-a843-3304eaaf24b0'
     ServerName: 'tenantserver'
-    DatabaseName: '<Database name>'
-    SqlUsername: '<SQL user name>'
-    SqlPassword: '<SQL user password>'
-    DacpacFile: '<Location of Dacpac file in $(Build.SourcesDirectory) after compilation>'
+    DatabaseName: 'newtenant'
+    SqlUsername: 'lmsv'
+    SqlPassword: 'Cavalo2321'
+    DacpacFile: 'C:\Users\Tomazinho Gato\Documents\SQL Server Management Studio\DAC Packages'
