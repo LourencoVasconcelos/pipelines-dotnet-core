@@ -19,7 +19,7 @@ steps:
 - task: SqlAzureDacpacDeployment@1
   displayName: 'newtest'
   inputs:
-    azureSubscription: 'Visual Studio Enterprise with MSDN'
+    azureSubscription: 'Visual Studio Enterprise with MSDN(479d6672-b304-4afa-a843-3304eaaf24b0)'
     ServerName: 'tenantserver'
     DatabaseName: 'newtenant'
     SqlUsername: 'lmsv'
