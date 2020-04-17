@@ -14,12 +14,15 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'hey'
 
+
 - task: SqlAzureDacpacDeployment@1
-  displayName: 'newtest'
   inputs:
-    azureSubscription: 'Visual Studio Enterprise with MSDN(479d6672-b304-4afa-a843-3304eaaf24b0)'
+    AuthenticationType: 'server'
     ServerName: 'tenantserver'
     DatabaseName: 'newtenant'
     SqlUsername: 'lmsv'
     SqlPassword: 'Cavalo2321'
-   # DacpacFile: 'C:\Users\Tomazinho Gato\Documents\SQL Server Management Studio\DAC Packages'
+    deployType: 'DacpacTask'
+    DeploymentAction: 'Publish'
+    IpDetectionMethod: 'AutoDetect'
+
