@@ -19,7 +19,7 @@ steps:
 - task: SqlAzureDacpacDeployment@1
   displayName: 'newtest'
   inputs:
-    azureSubscription: '479d6672-b304-4afa-a843-3304eaaf24b0'
+    azureSubscription: 'lvasconcelos-Test-479d6672-b304-4afa-a843-3304eaaf24b0'
     ServerName: 'tenantserver'
     DatabaseName: 'newtenant'
     SqlUsername: 'lmsv'
